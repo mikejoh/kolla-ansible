@@ -106,12 +106,12 @@
   become: True
   when: virtualenv is not none
 
-- name: Install pip
-  easy_install:
-    name: pip
-    virtualenv: "{{ virtualenv is none | ternary(omit, virtualenv) }}"
-    virtualenv_site_packages: "{{ virtualenv is none | ternary(omit, virtualenv_site_packages) }}"
-  become: True
+#- name: Install pip
+#  easy_install:
+#    name: pip
+#    virtualenv: "{{ virtualenv is none | ternary(omit, virtualenv) }}"
+#    virtualenv_site_packages: "{{ virtualenv is none | ternary(omit, virtualenv_site_packages) }}"
+#  become: True
 
 - name: Install latest pip in the virtualenv
   pip:

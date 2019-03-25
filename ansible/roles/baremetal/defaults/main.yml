@@ -73,6 +73,7 @@ debian_pkg_install:
  - git
  - python-setuptools
  - ntp
+ - python-pip
 
 redhat_pkg_install:
  - epel-release
